@@ -1,0 +1,21 @@
+name: Deploy WordPress CICD
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set permissions for deploy script
+      run: chmod +x /var/www/html/deploy.sh
+
+    - name: Run Deployment Script
+      run: bash /var/www/html/deploy.sh
+
