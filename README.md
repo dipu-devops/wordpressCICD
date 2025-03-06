@@ -1,0 +1,2 @@
+# wordpressCICD
+WordPress CICD Pipeline
